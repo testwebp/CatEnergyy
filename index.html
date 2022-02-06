@@ -4,39 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale = 1.0">
   <meta name = "description" content = "CatEnergy">
-  <link rel="stylesheet" href="css/style.min.css?_v=20220206140909">
+  <link rel="stylesheet" href="css/style.min.css?_v=20220206234222">
   <link rel="shortcut icon" href="img/index-can.webp">
   <link rel="preload" as="font" type="font/woff2"
       href="fonts/oswaldmedium.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2"
       href="fonts/oswaldregular.woff2" crossorigin>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=01b717a9-b0f1-4e44-8ca4-f47d22e01b5b&lang=ru_RU&_v=20220206140909" type="text/javascript">
-  </script>
-  <script type="text/javascript">
-    ymaps.ready(init);
-    var myMap;
-    var placemark;
-
-    function init(){
-        myMap = new ymaps.Map("yandex-map", {
-            center: [59.93873589, 30.32411152],
-            zoom: 17,
-            controls: ["zoomControl","trafficControl"],
-            behaviors: ["drag"]
-        });
-
-        placemark = new ymaps.Placemark([59.93882521, 30.32288495], {
-            hintContent: "CatEnergy",
-            balloonContent: "ул. Большая Конюшенная 19/8,<br> Санкт-Петербург"
-        },
-        {
-            iconLayout: "default#image",
-            iconImageHref: "../img/map_pin.svg",
-            iconImageSize: [113, 106]
-        });
-
-        myMap.geoObjects.add(placemark);
-    }
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=01b717a9-b0f1-4e44-8ca4-f47d22e01b5b&lang=ru_RU&_v=20220206234222">
   </script>
   <title>Главная Кэт энерджи</title>
 </head>
@@ -169,13 +143,13 @@
               </div>
             </section>
             <section class="about-us">
-              <dib id="yandex-map" class="about-us__map"></dib>
+              <div id="yandex-map" class="about-us__map"></div>
               <div class="about-us__block-address">
                 <div class="about-us__invitation">приглашаем
                   к сотрудничеству дилеров!</div>
                 <div class="about-us__address">ул. Большая
                   Конюшенная, д. 19/8
-                  Санкт-Петербург</div>
+                  <span class="about-us__town">Санкт-Петербург</span></div>
               </div>
               <div class="about-us__map"></div>
             </section>
@@ -207,6 +181,6 @@
 </footer>
 
     </div>
-    <script src="js/app.min.js?_v=20220206140909"></script>
+    <script src="js/app.min.js?_v=20220206234222"></script>
   </body>
 </html>
